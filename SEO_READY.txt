@@ -1,0 +1,14 @@
+SEO configuration for https://iftiofficial.com
+
+Both deployment versions include a production title, description, canonical URL,
+Open Graph and Twitter metadata, Person/WebSite/ProfessionalService JSON-LD,
+one descriptive H1, semantic sections, responsive styling, descriptive image
+alt text, robots.txt, and sitemap.xml.
+
+Before launch
+1. Deploy one version and connect iftiofficial.com with HTTPS enabled.
+2. Verify https://iftiofficial.com/, /robots.txt, /sitemap.xml, and /profile.jpg.
+3. Add https://iftiofficial.com/ as a Domain property in Google Search Console.
+4. Submit https://iftiofficial.com/sitemap.xml from Search Console > Sitemaps.
+5. Test the live page with Google's Rich Results Test and inspect indexing in
+   Search Console. Indexing and ranking take time and are not guaranteed.

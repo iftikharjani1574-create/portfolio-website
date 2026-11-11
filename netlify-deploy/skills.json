@@ -1,0 +1,22 @@
+[
+  {
+    "skill_name": "HTML",
+    "percentage": 90
+  },
+  {
+    "skill_name": "CSS",
+    "percentage": 95
+  },
+  {
+    "skill_name": "Bootstrap",
+    "percentage": 98
+  },
+  {
+    "skill_name": "JavaScript",
+    "percentage": 60
+  },
+  {
+    "skill_name": "AI Tools",
+    "percentage": 100
+  }
+]

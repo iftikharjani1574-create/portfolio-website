@@ -1,0 +1,44 @@
+[
+  {
+    "type": "hotel",
+    "title": "Hotel Websites",
+    "description": "Welcoming, polished websites for hotels, resorts, and stays.",
+    "cover": "images/category-hotel.svg",
+    "projects": [
+      {
+        "title": "Hotel Website",
+        "description": "A welcoming, responsive website concept for a hotel and its guests.",
+        "image": "images/category-hotel.svg",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "type": "business",
+    "title": "Business Websites",
+    "description": "Professional websites that help businesses stand out and grow.",
+    "cover": "images/category-business.svg",
+    "projects": [
+      {
+        "title": "Creative Studio",
+        "description": "A clean, responsive home for a creative team and its latest work.",
+        "image": "images/category-business.svg",
+        "link": ""
+      }
+    ]
+  },
+  {
+    "type": "educational",
+    "title": "Educational Websites",
+    "description": "Clear, engaging websites for schools, colleges, and learning.",
+    "cover": "images/category-educational.svg",
+    "projects": [
+      {
+        "title": "School Website",
+        "description": "A welcoming, responsive school website for families, students, and staff.",
+        "image": "images/category-educational.svg",
+        "link": ""
+      }
+    ]
+  }
+]

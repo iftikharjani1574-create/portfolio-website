@@ -1,0 +1,21 @@
+NETLIFY STATIC DEPLOYMENT
+
+1. Deploy the complete netlify-deploy folder using Netlify Drop or connect it
+   from a Git repository. index.html must be at the published root.
+2. In Netlify, open Site configuration > Domain management and add
+   iftiofficial.com. Apply the DNS records Netlify provides at your registrar,
+   set it as the primary domain, and wait for HTTPS to become active.
+3. Submit the contact form and verify that the submission appears in the Netlify
+   Forms area. If Netlify did not detect the form, verify the form-name,
+   data-netlify, and netlify attributes in index.html, then redeploy.
+4. Verify https://iftiofficial.com/, https://iftiofficial.com/sitemap.xml, and
+   https://iftiofficial.com/robots.txt.
+5. To update the static content, edit projects.json or skills.json and redeploy
+   the complete netlify-deploy folder. This version has no PHP admin or database.
+
+GOOGLE SEARCH CONSOLE
+
+Add https://iftiofficial.com/ as a Domain property (or URL-prefix property),
+complete verification, then submit sitemap.xml under Indexing > Sitemaps.
+Use URL Inspection to request indexing of the live homepage. Indexing and
+ranking timelines are controlled by search engines.

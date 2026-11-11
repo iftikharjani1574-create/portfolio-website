@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Projects Admin</title>
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js" defer></script>
+</head>
+<body>
+    <main class="page-shell">
+        <header class="page-header">
+            <a class="brand" href="index.html">Project Admin</a>
+            <a class="site-link" href="index.html">View website <span aria-hidden="true">↗</span></a>
+        </header>
+
+        <section id="login-panel" class="panel login-panel" aria-labelledby="login-title">
+            <div class="panel-heading">
+                <p class="eyebrow">WELCOME BACK</p>
+                <h1 id="login-title">Sign in</h1>
+                <p>Sign in to manage the projects shown on your website.</p>
+            </div>
+            <form id="login-form">
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" autocomplete="username" required>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" autocomplete="current-password" required>
+                <button class="button button-primary button-full" type="submit">Sign in</button>
+                <p id="login-status" class="status-message" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="dashboard" class="dashboard" hidden>
+            <div class="dashboard-heading">
+                <div>
+                    <p class="eyebrow">YOUR PORTFOLIO</p>
+                    <h1>Manage projects</h1>
+                    <p>Add a project once and it will appear on your homepage.</p>
+                </div>
+                <button id="logout-button" class="button button-secondary" type="button">Sign out</button>
+            </div>
+
+            <section class="panel" aria-labelledby="add-project-title">
+                <div class="panel-heading">
+                    <h2 id="add-project-title">Add a project</h2>
+                    <p>Enter the details below, then select Save Project.</p>
+                </div>
+                <form id="project-form">
+                    <div class="form-field">
+                        <label for="project-title">Project title</label>
+                        <input id="project-title" name="title" type="text" maxlength="200" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="project-description">Project description</label>
+                        <textarea id="project-description" name="description" rows="4" maxlength="5000" required></textarea>
+                    </div>
+                    <div class="form-field">
+                        <label for="project-type">Website type</label>
+                        <select id="project-type" name="project_type" required>
+                            <option value="" selected disabled>Select a website type</option>
+                            <option value="hotel">Hotel Websites</option>
+                            <option value="business">Companies / Business Websites</option>
+                            <option value="educational">Educational Websites</option>
+                        </select>
+                    </div>
+                    <fieldset class="image-options">
+                        <legend>Project image</legend>
+                        <div class="form-field">
+                            <label for="image-url">Image URL</label>
+                            <input id="image-url" name="image_url" type="url" placeholder="https://example.com/image.jpg">
+                        </div>
+                        <div class="form-field">
+                            <label for="image-file">Or upload an image <span class="field-note">(JPG, PNG, GIF, or WebP; up to 5 MB)</span></label>
+                            <input id="image-file" name="image_file" type="file" accept="image/jpeg,image/png,image/gif,image/webp">
+                        </div>
+                    </fieldset>
+                    <div class="form-field">
+                        <label for="project-link">Project link <span class="field-note">(optional)</span></label>
+                        <input id="project-link" name="project_link" type="url" maxlength="1000" placeholder="https://example.com/project">
+                    </div>
+                    <div class="form-actions">
+                        <button class="button button-primary" type="submit">Save Project</button>
+                        <p id="project-status" class="status-message" role="status" aria-live="polite"></p>
+                    </div>
+                </form>
+            </section>
+
+            <section class="projects-section" aria-labelledby="saved-projects-title">
+                <div class="section-title-row">
+                    <div>
+                        <p class="eyebrow">PORTFOLIO CONTENT</p>
+                        <h2 id="saved-projects-title">Saved projects</h2>
+                    </div>
+                    <span id="project-count" class="project-count"></span>
+                </div>
+                <div id="projects-list" class="project-list" aria-live="polite"></div>
+                <p id="list-status" class="status-message" role="status" aria-live="polite"></p>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

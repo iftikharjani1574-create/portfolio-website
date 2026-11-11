@@ -1,0 +1,53 @@
+LIVE DEPLOYMENT GUIDE - https://iftiofficial.com
+
+Choose ONE deployment version. Both versions use the same domain and SEO URLs.
+
+VERSION 1 - PHP + MYSQL (HOSTINGER / INFINITYFREE)
+
+1. Make sure the hosting account provides PHP 8+ with PDO MySQL enabled. Create
+   a MySQL database named ifti_portfolio and a dedicated database user
+   with a strong password. Grant that user access to the database.
+2. Import database.sql into ifti_portfolio using phpMyAdmin.
+3. Configure PORTFOLIO_DB_HOST, PORTFOLIO_DB_NAME, PORTFOLIO_DB_USER, and
+   PORTFOLIO_DB_PASSWORD in the PHP hosting environment, or set DB_HOST,
+   DB_NAME, DB_USER, and DB_PASSWORD in config.php to the exact values shown by
+   your host. Replace PORTFOLIO_ADMIN_USERNAME and PORTFOLIO_ADMIN_PASSWORD
+   with a unique username and a long random password. The admin login
+   intentionally remains disabled until these placeholders are changed.
+4. Upload the PHP deployment's contents (including .htaccess, index.html,
+   style.css, script.js, config.php, api/, admin.html, admin.css, admin.js,
+   database.sql, profile.jpg, and uploads/) to the hosting document root,
+   usually public_html. Keep api/ and uploads/ intact. The uploads/projects
+   directory must be writable by PHP when the admin uploads images.
+5. Enable a free SSL certificate and connect iftiofficial.com in your hosting
+   control panel. Test the homepage, api/get-skills.php, api/get-projects.php,
+   and contact form over HTTPS.
+6. Open https://iftiofficial.com/admin.html and sign in with the credentials
+   configured in config.php. Add a hotel, business, or educational project and
+   confirm it appears in the matching homepage category. Delete a test project
+   to verify administration.
+
+VERSION 2 - NETLIFY STATIC BACKUP
+
+1. Sign in at https://app.netlify.com/ and create a site by importing a Git
+   repository or deploying the complete netlify-deploy folder. index.html must
+   be at the published root.
+2. In Netlify, open Site configuration > Domain management and add
+   iftiofficial.com. Apply the DNS records Netlify provides at your registrar.
+   Set the primary domain and wait for Netlify HTTPS to become active.
+3. Submit the contact form once, then verify the submission in the Netlify
+   Forms area. Form detection may require a new deploy after enabling forms.
+4. To update static skills or projects, edit skills.json or projects.json in
+   netlify-deploy and redeploy that folder. There is no PHP admin or database in
+   this static version.
+
+GOOGLE SEARCH CONSOLE
+
+1. Add https://iftiofficial.com/ in Google Search Console. Prefer the Domain
+   property if you can add its DNS verification record; otherwise use the URL
+   prefix property and complete its verification.
+2. Open Indexing > Sitemaps, enter sitemap.xml, and click Submit.
+3. Use URL Inspection to test https://iftiofficial.com/ and request indexing
+   after the selected deployment is live.
+4. Check sitemap status and indexing reports later. Search engines control their
+   own crawl and indexing timelines.
